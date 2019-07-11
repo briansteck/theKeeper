@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- including bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- for iPhone display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- touch-action: manipulation; (disables doubletap-to-zoom on iPhone) -->
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            touch-action: manipulation;
+        }
+        input {
+            font-size: larger;
+            font-weight: bolder;
+            text-align: right;
+            width: 204px;
+        }
+    </style>
+</head>
+<title>theKeeper</title>
+<body>
+    <div style="padding-bottom: 8px">
+        <button type="button" class="btn btn-dark btn-block" onclick="fnAdd()"><b> tap to add player</b></button>
+    </div>
+    <div class="container"> <!-- players dyn created -->
+        <div class="row"> 
+            <div class="col-sm-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="container"> <!-- number pad -->
+        <div class="row"> <!-- numbers screen -->
+            <div class="col-sm-4" style="padding-bottom: 4px">
+                <input type="text" id="txtBox">
+            </div>
+        </div>
+        <div class="row"> <!-- 1 2 3 --> 
+            <div class="col-sm-4" style="padding-bottom: 4px">
+                <img src=".\images\1.png" id="1" width="65px" height="65px" onclick="fnClick(this.id)">
+                <img src=".\images\2.png" id="2" width="65px" height="65px" onclick="fnClick(this.id)">
+                <img src=".\images\3.png" id="3" width="65px" height="65px" onclick="fnClick(this.id)">
+            </div>
+        </div>
+        <div class="row"> <!-- 4 5 6 -->
+            <div class="col-sm-4" style="padding-bottom: 4px">
+                <img src=".\images\4.png" id="4" width="65px" height="65px" onclick="fnClick(this.id)">
+                <img src=".\images\5.png" id="5" width="65px" height="65px" onclick="fnClick(this.id)">
+                <img src=".\images\6.png" id="6" width="65px" height="65px" onclick="fnClick(this.id)">
+            </div>
+        </div>
+        <div class="row"> <!-- 7 8 9 -->
+            <div class="col-sm-4" style="padding-bottom: 4px">
+                <img src=".\images\7.png" id="7" width="65px" height="65px" onclick="fnClick(this.id)">
+                <img src=".\images\8.png" id="8" width="65px" height="65px" onclick="fnClick(this.id)">
+                <img src=".\images\9.png" id="9" width="65px" height="65px" onclick="fnClick(this.id)">
+            </div>
+        </div>   
+        <div class="row"> <!-- 0 -->
+            <div class="col-sm-4">
+                <img src=".\images\neg.png" id="neg" width="65px" height="65px" onclick="fnNegative()">
+                <img src=".\images\0.png" id="0" width="65px" height="65px" onclick="fnClick(this.id)">
+                <img src=".\images\clear.png" id="bksp" width="65px" height="65px" onclick="fnClearInput()">
+            </div>
+        </div>              
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-6" style="align-items: center">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- centers on iPhone -->
+            <img src=".\images\Die1.png" id="DieImg1" width="60px" height="60px" onclick="fnRoll()">
+            &nbsp;
+            <img src=".\images\Die1.png" id="DieImg2" width="60px" height="60px" onclick="fnRoll()">
+        </div>
+    </div>
+</body>
+<script src="button.js"></script>
+</html>
