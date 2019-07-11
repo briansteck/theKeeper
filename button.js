@@ -1,3 +1,5 @@
+// ** Brian Steck **
+
 // ***  global variables  ***
 var iPlayerNumber = 1;
 
